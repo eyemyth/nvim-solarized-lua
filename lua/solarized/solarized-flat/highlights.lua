@@ -327,7 +327,7 @@ function M.load_syntax(colors)
 	syntax['gitcommitSelectedArrow'] = syntax['gitcommitSelectedFile']
 	syntax['gitcommitUnmergedArrow'] = syntax['gitcommitUnmergedFile']
 	syntax['jsFuncCall'] = syntax['Function']
-	syntax['rubySymbol'] = syntax['Type']
+	syntax['rubySymbol'] = syntax['String']
 	syntax['hsImportParams'] = syntax['Delimiter']
 	syntax['hsDelimTypeExport'] = syntax['Delimiter']
 	syntax['hsModuleStartLabel'] = syntax['hsStructure']
@@ -350,7 +350,7 @@ function M.load_syntax(colors)
 	syntax['TSConstant'] = syntax['Constant']
 	syntax['TSConstBuiltin'] = syntax['Constant']
 	syntax['TSConstMacro'] = syntax['Constant']
-	syntax['TSError'] = syntax['Error']
+	syntax['TSError'] = {fg=colors.red}
 	syntax['TSException'] = syntax['Exception']
 	syntax['TSField'] = syntax['Identifier']
 	syntax['TSFloat'] = syntax['Float']
@@ -378,7 +378,7 @@ function M.load_syntax(colors)
 	syntax['TSKeywordFunction'] = syntax['Identifier']
 	syntax['TSLiteral'] = syntax['Normal']
 	syntax['TSParameter'] = syntax['Identifier']
-	syntax['TSVariable'] = syntax['Identifier']
+	syntax['TSVariable'] = {fg=colors.base0}
 	syntax['TSVariableBuiltin'] = syntax['Identifier']
 	syntax['TSTag'] = syntax['Special']
 	syntax['TSTagDelimiter'] = syntax['Delimiter']
