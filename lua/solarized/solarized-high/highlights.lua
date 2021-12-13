@@ -23,7 +23,7 @@ function M.load_syntax(colors)
 	syntax['Normal'] = {fg=colors.base1,bg=utils.termtrans(colors.base03)}
 	syntax['FoldColumn'] = {fg=colors.base0,bg=utils.termtrans(colors.base02)}
 	syntax['Folded'] = {fg=colors.base0,bg=utils.termtrans(colors.base02),guisp=colors.base03,style='bold'}
-	syntax['LineNr'] = {fg=colors.base01,bg=utils.termtrans(colors.base02)}
+	syntax['LineNr'] = {fg=colors.yellow,bg=utils.termtrans(colors.base02)}
 	syntax['Terminal'] = syntax['Normal']
 
 
