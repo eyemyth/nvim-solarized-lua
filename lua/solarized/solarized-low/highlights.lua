@@ -344,20 +344,20 @@ function M.load_syntax(colors)
 	syntax['pandocLineBreak'] = syntax['pandocEscapePair']
 	syntax['pandocMetadataTitle'] = syntax['pandocMetadata']
 
-	syntax['LspDiagnosticsDefaultError'] = {fg=colors.red,guisp=colors.red,style='none'}
-	syntax['LspDiagnosticsDefaultWarning'] = {fg=colors.yellow,guisp=colors.yellow,style='none'}
-	syntax['LspDiagnosticsDefaultInformation'] = {fg=colors.cyan,guisp=colors.cyan,style='none'}
-	syntax['LspDiagnosticsDefaultHint'] = {fg=colors.green,guisp=colors.green,style='none'}
-	syntax['LspDiagnosticsUnderlineError'] = {fg=colors.none,guisp=colors.none,style='underline'}
-	syntax['LspDiagnosticsUnderlineWarning'] = {fg=colors.none,guisp=colors.none,style='underline'}
-	syntax['LspDiagnosticsUnderlineInformation'] = {fg=colors.none,guisp=colors.none,style='underline'}
-	syntax['LspDiagnosticsUnderlineHint'] = {fg=colors.none,guisp=colors.none,style='underline'}
+	syntax['DiagnosticError'] = {fg=colors.red,guisp=colors.red,style='none'}
+	syntax['DiagnosticWarn'] = {fg=colors.yellow,guisp=colors.yellow,style='none'}
+	syntax['DiagnosticInfo'] = {fg=colors.cyan,guisp=colors.cyan,style='none'}
+	syntax['DiagnosticHint'] = {fg=colors.green,guisp=colors.green,style='none'}
+	syntax['DiagnosticUnderlineError'] = {fg=colors.none,guisp=colors.red,style='underline'}
+	syntax['DiagnosticUnderlineWarn'] = {fg=colors.none,guisp=colors.yellow,style='underline'}
+	syntax['DiagnosticUnderlineInfo'] = {fg=colors.none,guisp=colors.cyan,style='underline'}
+	syntax['DiagnosticUnderlineHint'] = {fg=colors.none,guisp=colors.green,style='underline'}
+
+	syntax['LspReferenceRead'] = {fg=colors.none,style='underline'}
+	syntax['LspReferenceText'] = syntax['LspReferenceRead']
+	syntax['LspReferenceWrite'] = {fg=colors.none,style='underline,bold'}
 
 	syntax['LspSagaFinderSelection'] = syntax['Search']
-	syntax['DiagnosticError'] = syntax['LspDiagnosticsDefaultError']
-	syntax['DiagnosticWarning'] = syntax['LspDiagnosticsDefaultWarning']
-	syntax['DiagnosticInformation'] = syntax['LspDiagnosticsDefaultInformation']
-	syntax['DiagnosticHint'] = syntax['LspDiagnosticsDefaultHint']
 	syntax['TargetWord'] = syntax['Title']
 
 	syntax['GitSignsAdd'] = syntax['DiffAdd']
@@ -367,6 +367,70 @@ function M.load_syntax(colors)
 	syntax['VGitSignAdd'] = syntax['DiffAdd']
 	syntax['VgitSignChange'] = syntax['DiffChange']
 	syntax['VGitSignRemove'] = syntax['DiffDelete']
+
+	-- nvim-cmp syntax support
+	syntax['CmpDocumentation' ] = {fg=colors.base1, bg=colors.base02 }
+	syntax['CmpDocumentationBorder' ] = {fg=colors.base1, bg=colors.base02 }
+
+	syntax['CmpItemAbbr' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemAbbrDeprecated' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemAbbrMatch' ] = {fg=colors.base1, bg=colors.none }
+	syntax['CmpItemAbbrMatchFuzzy' ] = {fg=colors.base1, bg=colors.none }
+
+	syntax['CmpItemKindDefault' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemMenu' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindKeyword' ] = {fg=colors.yellow, bg=colors.none }
+	syntax['CmpItemKindVariable' ] = {fg=colors.green, bg=colors.none }
+	syntax['CmpItemKindConstant' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindReference' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindValue' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindFunction' ] = {fg=colors.blue, bg=colors.none }
+	syntax['CmpItemKindMethod' ] = {fg=colors.blue, bg=colors.none }
+	syntax['CmpItemKindConstructor' ] = {fg=colors.blue, bg=colors.none }
+	syntax['CmpItemKindClass' ] = {fg=colors.red, bg=colors.none }
+	syntax['CmpItemKindInterface' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindStruct' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindEvent' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindEnum' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindUnit' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindModule' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindProperty' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindField' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindTypeParameter' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindEnumMember' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindOperator' ] = {fg=colors.base0, bg=colors.none }
+	syntax['CmpItemKindSnippet' ] = {fg=colors.orange, bg=colors.none }
+
+	syntax['NavicIconsFile'] = syntax['CmpItemKindFile']
+	syntax['NavicIconsModule'] = syntax['CmpItemKindModule']
+	syntax['NavicIconsNamespace'] = syntax['CmpItemKindModule']
+	syntax['NavicIconsPackage'] = syntax['CmpItemKindModule']
+	syntax['NavicIconsClass'] = syntax['CmpItemKindClass']
+	syntax['NavicIconsMethod'] = syntax['CmpItemKindMethod']
+	syntax['NavicIconsProperty'] = syntax['CmpItemKindProperty']
+	syntax['NavicIconsField'] = syntax['CmpItemKindField']
+	syntax['NavicIconsConstructor'] = syntax['CmpItemKindConstructor']
+	syntax['NavicIconsEnum'] = syntax['CmpItemKindEnum']
+	syntax['NavicIconsInterface'] = syntax['CmpItemKindInterface']
+	syntax['NavicIconsFunction'] = syntax['CmpItemKindFunction']
+	syntax['NavicIconsVariable'] = syntax ['CmpItemKindVariable']
+	syntax['NavicIconsConstant'] = syntax['CmpItemKindConstant']
+	syntax['NavicIconsString'] = syntax['String']
+	syntax['NavicIconsNumber'] = syntax['Number']
+	syntax['NavicIconsBoolean'] = syntax['Boolean']
+	syntax['NavicIconsArray'] = syntax['CmpItemKindClass']
+	syntax['NavicIconsObject'] = syntax['CmpItemKindClass']
+	syntax['NavicIconsKey'] = syntax['CmpItemKindKeyword']
+	syntax['NavicIconsKeyword'] = syntax['CmpItemKindKeyword']
+	syntax['NavicIconsNull'] =  {fg=colors.blue, bg=colors.none }
+	syntax['NavicIconsEnumMember'] = syntax['CmpItemKindEnumMember']
+	syntax['NavicIconsStruct'] = syntax['CmpItemKindStruct']
+	syntax['NavicIconsEvent'] = syntax['CmpItemKindEvent']
+	syntax['NavicIconsOperator'] = syntax['CmpItemKindOperator']
+	syntax['NavicIconsTypeParameter'] = syntax['CmpItemKindTypeParameter']
+	syntax['NavicText'] = syntax['LineNr']
+	syntax['NavicSeparator'] = syntax['Comment']
+
 
 	for group, highlights in pairs(syntax) do
 		utils.highlighter(group, highlights)
