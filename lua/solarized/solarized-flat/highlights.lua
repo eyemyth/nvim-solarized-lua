@@ -474,6 +474,50 @@ function M.load_syntax(colors)
 	syntax['NavicText'] = syntax['LineNr']
 	syntax['NavicSeparator'] = syntax['Comment']
 
+	-- Bufferline Highlights
+	-- The background of the bufferline
+	syntax['BufferLineFill'] = { fg = colors.base0, bg = colors.base03 }
+
+	-- Inactive/background tabs
+	syntax['BufferLineBackground'] = { fg = colors.base01, bg = colors.base03 }
+	syntax['BufferLineBuffer'] = { fg = colors.base01, bg = colors.base03 }
+	syntax['BufferLineSeparator'] = { fg = colors.base03, bg = colors.base03 }
+	syntax['BufferLineCloseButton'] = { fg = colors.base01, bg = colors.base03 }
+	syntax['BufferLineIndicator'] = { fg = colors.base03, bg = colors.base03 }
+
+	-- Visible (but not selected) tabs
+	syntax['BufferLineBufferVisible'] = { fg = colors.base0, bg = colors.base03 }
+	syntax['BufferLineSeparatorVisible'] = { fg = colors.base03, bg = colors.base03 }
+	syntax['BufferLineCloseButtonVisible'] = { fg = colors.base0, bg = colors.base03 }
+	syntax['BufferLineIndicatorVisible'] = { fg = colors.base03, bg = colors.base03 }
+
+	-- Selected tab
+	syntax['BufferLineBufferSelected'] = { fg = colors.base03, bg = colors.base1, style = 'bold' }
+	syntax['BufferLineSeparatorSelected'] = { fg = colors.base03, bg = colors.base1 }
+	syntax['BufferLineCloseButtonSelected'] = { fg = colors.base03, bg = colors.base1 }
+	syntax['BufferLineIndicatorSelected'] = { fg = colors.blue, bg = colors.base1, style = 'bold' }
+
+	-- Modified tabs
+	syntax['BufferLineModified'] = { fg = colors.yellow, bg = colors.base03 }
+	syntax['BufferLineModifiedVisible'] = { fg = colors.yellow, bg = colors.base03 }
+	syntax['BufferLineModifiedSelected'] = { fg = colors.yellow, bg = colors.base1 }
+
+	-- Diagnostics
+	syntax['BufferLineDiagnostics'] = { fg = colors.base01, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsVisible'] = { fg = colors.base0, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsSelected'] = { fg = colors.base03, bg = colors.base1, style = 'bold' }
+	syntax['BufferLineDiagnosticsError'] = { fg = colors.red, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsWarn'] = { fg = colors.yellow, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsInfo'] = { fg = colors.cyan, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsHint'] = { fg = colors.green, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsErrorVisible'] = { fg = colors.red, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsWarnVisible'] = { fg = colors.yellow, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsInfoVisible'] = { fg = colors.cyan, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsHintVisible'] = { fg = colors.green, bg = colors.base03 }
+	syntax['BufferLineDiagnosticsErrorSelected'] = { fg = colors.red, bg = colors.base1 }
+	syntax['BufferLineDiagnosticsWarnSelected'] = { fg = colors.yellow, bg = colors.base1 }
+	syntax['BufferLineDiagnosticsInfoSelected'] = { fg = colors.cyan, bg = colors.base1 }
+	syntax['BufferLineDiagnosticsHintSelected'] = { fg = colors.green, bg = colors.base1 }
 
 
 	for group, highlights in pairs(syntax) do
